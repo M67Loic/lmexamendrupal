@@ -1,5 +1,5 @@
 #Nom du module.
-name: 'Mon module examen'
+name: 'File Upload'
 #Description du module.
 description: 'My module for D8 developper'
 #Type de code (module, theme,...)

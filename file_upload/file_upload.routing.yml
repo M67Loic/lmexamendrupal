@@ -1,0 +1,9 @@
+upload_file.upload_file:
+  path: '/admin/content/file-dl'
+  defaults:
+    _title: 'File Upload'
+    _form: '\Drupal\file_upload\Form\UploadFile'
+  requirements:
+    _access: 'TRUE'  
+  
+

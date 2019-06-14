@@ -34,24 +34,23 @@ class UploadFile extends FormBase
             }
         
             
-        $form['document_upload']['file_up'] = [
-            '#type' => 'managed_file',
-            '#upload_location' => '/file_upload/file_up/',
-            '#multiple' => FALSE,
-            'description' => t('Allowed extention : pdf'),
-            '#upload_validators' => [
-                'file_validate_is_file' => array(),
-                'file_validate_extensions' => array('pdf'),
-                'file_validate_size' => array(1000000),
-            ],
-            '#title' => t('Upload a pdf documents'),
-
-        ];
+            $form['document_upload']['file_up'] = [
+                '#type' => 'managed_file',
+                '#upload_location' => '/file_upload/file_up/',
+                '#multiple' => FALSE,
+                'description' => t('Allowed extention : pdf'),
+                '#upload_validators' => [
+                    'file_validate_is_file' => array(),
+                    'file_validate_extensions' => array('pdf'),
+                    'file_validate_size' => array(1000000),
+                ],
+                '#title' => t('Upload a pdf documents'),
+            ];
 
 
        
 
-    public function validateForm(array &$form, FormStateInterface $form_state){
+    function validateForm(array &$form, FormStateInterface $form_state){
         $manageFieldId = $form_state->getValue(['document_upload' => 'file_up']);
 
         if (empty($manageFieldId)) {

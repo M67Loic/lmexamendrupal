@@ -54,7 +54,7 @@ class UploadFile extends FormBase
         $manageFieldId = $form_state->getValue(['document_upload' => 'file_up']);
 
         if (empty($manageFieldId)) {
-            $form_state->setErrorByName('test','No document found !')
+            $form_state->setErrorByName('test','No document found !');
         }
     }
 	

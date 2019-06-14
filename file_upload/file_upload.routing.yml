@@ -1,9 +1,17 @@
-upload_file.upload_file:
+upload_file.backoff:
   path: '/admin/content/file-dl'
   defaults:
+    _controller: '\Drupal\file_upload\Controller\UploadController::content'
     _title: 'File Upload'
     _form: '\Drupal\file_upload\Form\UploadFile'
   requirements:
-    _access: 'TRUE'  
+    _access: access content
   
-
+upload_file.frontoff:
+  path: '/file-dl'
+  defaults:
+    _controller: '\Drupal\file_upload\Controller\UploadController::content'
+    _title: 'File Upload'
+    _form: '\Drupal\file_upload\Form\UploadFile'
+  requirements:
+    _access: access content

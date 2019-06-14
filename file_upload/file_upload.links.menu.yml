@@ -1,7 +1,14 @@
-upload_file.upload_file:
-  title: 'Upload file'
+upload_file.backoff:
+  title: 'File Upload'
   description: 'upload_file page'
-  route_name: upload_file.upload_file
+  route_name: upload_file.backoff
+  menu_name: content
+  weight: 1
+
+upload_file.frontoff:
+  title: 'File Upload'
+  description: 'upload_file page'
   menu_name: main
   weight: 1
+
 

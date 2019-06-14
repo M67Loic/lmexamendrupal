@@ -6,7 +6,8 @@ upload_file.backoff:
     _form: '\Drupal\file_upload\Form\UploadFile'
   requirements:
     _access: access content
-  
+# Code de la route vers le backoffice
+
 upload_file.frontoff:
   path: '/file-dl'
   defaults:
@@ -15,3 +16,4 @@ upload_file.frontoff:
     _form: '\Drupal\file_upload\Form\UploadFile'
   requirements:
     _access: access content
+# Code de la route vers le front office

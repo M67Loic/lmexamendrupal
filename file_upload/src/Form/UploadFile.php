@@ -32,7 +32,7 @@ class UploadFile extends FormBase
                     '#markup' => '<h2>'.$this->t('OK').'</h2>',
                 ];
             }
-        
+            //Le code ci-dessus est cencer afficher OK si le fichier est enregistrer.
             
             $form['document_upload']['file_up'] = [
                 '#type' => 'managed_file',
@@ -46,8 +46,12 @@ class UploadFile extends FormBase
                 ],
                 '#title' => t('Upload a pdf documents'),
             ];
+            // Le code ci-dessus est cencer permettre de laisser passer les fichier pdf lors du passage d'un fichier dans le formulaire.
 
-
+            $fileup = $form_state->getValue();
+            $file = File::load($fileup[0] );
+            $file->SetPermanent();
+            $file->save();
        
 
     function validateForm(array &$form, FormStateInterface $form_state){
@@ -57,6 +61,7 @@ class UploadFile extends FormBase
             $form_state->setErrorByName('test','No document found !');
         }
     }
+    // Le code ci-dessus est cencer enregister le fichier s'il est valide, et le refuser si ce dernier est trop lourd ou dans un mauvais format.
 	
 
 }

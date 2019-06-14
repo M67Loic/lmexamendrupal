@@ -4,11 +4,11 @@ upload_file.backoff:
   route_name: upload_file.backoff
   menu_name: content
   weight: 1
+# Code de la route vers le backoffice
 
 upload_file.frontoff:
   title: 'File Upload'
   description: 'upload_file page'
   menu_name: main
   weight: 1
-
-
+#Code de la route vers le front office pour autoriser le téléchargement
